@@ -2,7 +2,11 @@ MemeBackend::Application.routes.draw do
   resources :messages
 
 
-  resources :phone_numbers
+  resources :phone_numbers do
+    collection do
+      get :search
+    end
+  end
 
 
   resource :api, :controller => "Api" do

@@ -5,8 +5,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.all
-
+    @messages = Message.where("1 = 1")
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @messages.to_json(:include => [:phone_number]) }

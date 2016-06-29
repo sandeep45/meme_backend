@@ -8,7 +8,7 @@ class ApiController < ActionController::Base
         :params => {
           :q => params[:q],
           :pageIndex => 0,
-          :pageSize => 10
+          :pageSize => 12
         }
       }
     render :json => response.body
