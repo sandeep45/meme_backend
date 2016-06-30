@@ -29,4 +29,4 @@ ADD . $APP_HOME
 
 EXPOSE 3000
 
-ENTRYPOINT ["bundle", "exec", "rails", "server"]
+CMD ["bundle", "exec", "rails", "server"]
