@@ -1,4 +1,7 @@
 MemeBackend::Application.routes.draw do
+  resources :foods
+
+
   resources :teachers
 
 
