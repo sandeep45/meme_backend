@@ -3,9 +3,10 @@ default: &default
   encoding: unicode
   pool: 5
   timeout: 5000
-  username: postgres
-  host: postgres.cloud66.local
   port: 5432
+  username: <%=ENV['POSTGRESQL_USERNAME']%>
+  password: <%=ENV['POSTGRESQL_PASSWORD']%>
+  host: <%= ENV['POSTGRESQL_ADDRESS']%>
 
 
 development:
