@@ -57,14 +57,11 @@ class PhoneNumbersController < ApplicationController
   def create
     @phone_number = PhoneNumber.new(params[:phone_number])
 
-    respond_to do |format|
       if @phone_number.save
-        format.html { redirect_to @phone_number, notice: 'Phone book was successfully created.' }
-        format.json { render json: @phone_number.to_json(:include => [:messages]),
-          status: :created, location: @phone_number }
+        render json: @phone_number.to_json(:include => [:messages]),
+          status: :created, location: @phone_number
       else
-        format.html { render action: "new" }
-        format.json { render json: @phone_number.errors, status: :unprocessable_entity }
+        render json: @phone_number.errors, status: :unprocessable_entity
       end
     end
   end
