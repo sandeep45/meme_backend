@@ -63,7 +63,6 @@ class PhoneNumbersController < ApplicationController
       else
         render json: @phone_number.errors, status: :unprocessable_entity
       end
-    end
   end
 
   # PUT /phone_numbers/1
