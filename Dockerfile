@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y -q \
   net-tools \
   man \
   vim \
-  postgresql-client
+  postgresql-client \
+  dns utils
 
 ENV APP_HOME /myapp
 
